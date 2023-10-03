@@ -156,8 +156,10 @@ def embeddings():
         }
     }
 
-def main():
-    app.run(host='0.0.0.0', port=1337, debug=True)
 
-if __name__ == '__main__':
-    main()
+# Do not enable them in production environments
+# def main():
+#     app.run(host='0.0.0.0', port=1337, debug=True)
+
+# if __name__ == '__main__':
+#     main()
