@@ -36,4 +36,4 @@ ENV GUNICORN_BIND=0.0.0.0:1337
 EXPOSE 1337
 
 # Define the default command to run the app using Gunicorn.
-CMD ["gunicorn", "-b", "$GUNICORN_BIND", "interference.app:app"]
+CMD ["gunicorn", "-b", "0.0.0.0:1337", "interference.app:app"]

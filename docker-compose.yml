@@ -11,3 +11,4 @@ services:
       - '1337:1337'
     environment:
       - PYTHONUNBUFFERED=1
+      - GUNICORN_BIND=0.0.0.0:1337
