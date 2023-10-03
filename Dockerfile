@@ -27,7 +27,7 @@ RUN pip install --upgrade pip && pip install -r requirements.txt
 COPY . /app/
 
 # Install additional requirements specific to the interference module/package.
-RUN pip install -r interference/requirements.txt
+# RUN pip install -r interference/requirements.txt
 
 # Set the Gunicorn bind host and port (adjust as needed).
 ENV GUNICORN_BIND=0.0.0.0:1337
