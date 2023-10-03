@@ -10,3 +10,4 @@ flask
 flask-cors
 typing-extensions
 PyExecJS
+gunicorn
