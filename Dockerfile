@@ -27,13 +27,10 @@ RUN pip install --upgrade pip && pip install -r requirements.txt
 COPY . /app/
 
 # Install additional requirements specific to the interference module/package.
-# RUN pip install -r interference/requirements.txt
+RUN pip install -r interference/requirements.txt
 
-# Set the Gunicorn bind host and port (adjust as needed).
-ENV GUNICORN_BIND=0.0.0.0:1337
-
-# Expose port 1337 (Gunicorn will bind to this port)
+# Expose port 1337
 EXPOSE 1337
 
-# Define the default command to run the app using Gunicorn.
-CMD ["gunicorn", "-b", "0.0.0.0:1337", "interference.app:app"]
+# Define the default command to run the app using Python's module mode.
+CMD ["python", "-m", "interference.app"]
